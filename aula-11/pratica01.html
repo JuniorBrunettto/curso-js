@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pratica 01- ex08js</title>
+  </head>
+  <body>
+    <h1>Nacionalidade</h1>
+    Qual Pais Voçe mora?<input type="text" id="pais" name="pais" />
+    <input type="button" value="verificar" onclick="nacionalidade()" />
+    <div id="res"></div>
+
+    <script>
+      function nacionalidade() {
+        var paisx = document.getElementById("pais").value;
+        var res = document.getElementById("res");
+
+        res.innerHTML = `Vivendo em ${paisx} voçe é `;
+        if (paisx == "Brasil") {
+          res.innerHTML += "brasileiro";
+        } else {
+          res.innerHTML += "estrangeiro";
+        }
+      }
+    </script>
+  </body>
+</html>
